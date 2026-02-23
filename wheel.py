@@ -57,6 +57,16 @@ def spin_wheel(options):
         wheel()
     
     elif response == 'yes':
+
+        if not options:  #checks if the options list is empty
+            print("No more options left on the wheel! Would you like to create a new wheel? Say 'yes' to create a new wheel or 'no' to exit.")
+            new_response = input().strip().lower()
+            if new_response == 'yes':
+                wheel()
+            else:
+                print("Exiting the program. Goodbye!")
+            return
+
         print("Spinning the wheel...")
         result = random.choice(options) #randomly selects an option from the options list
         print(f"The wheel landed on: {result}")
