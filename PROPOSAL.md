@@ -5,7 +5,7 @@
 **Core features:** 
 - take inputs (names or activities)
 - randomize inpurts
-- when promted, select one of the inputs and print
+- when prompted, select one of the inputs and print
 **What I don't know yet:** 
 - I don't know how to randomize the inputs
 - I don't know if I should have the selected input removed so the wheel can be used again without that input being selected a second time

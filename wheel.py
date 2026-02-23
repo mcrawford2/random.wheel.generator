@@ -1,22 +1,37 @@
-"""Welcome to the Random Wheel Generator. This program allows you to create a wheel with various options and spin it to get random results. You can customize the wheel by adding your own options, and the program will randomly select one when you spin it."""
+"""This is the Random Wheel Generator. This program allows you to create a wheel with various options and spin it to get random results. You can customize the wheel by adding your own options, and the program will randomly select one when you spin it."""
 
 import random
+
+print("Welcome to the Random Wheel Generator!")
+
+def intro():
+    """asks if user is ready to begin"""
+
+    print("Are you ready to create your own wheel and spin it for random results? Say 'yes' to continue or 'no' to exit.")
+
+    response = input().strip().lower()
+    if response == 'no':
+        print("Exiting the program. Goodbye!")
+    elif response == 'yes':
+        wheel()
+    else:
+        print("Invalid input. Please enter 'yes' or 'no'.")
+        intro()
 
 def wheel():
     """Creates the wheel and takes user input for options"""
     
-    print("Welcome to the Random Wheel Generator!")
-    print("You can add options to your wheel and spin it to get a random result.")
+    print("You can add an unlimited number of options to your wheel.")
 
     options = []
     while True:
-        option = input("Enter option (or type 'done' to finish): ").strip() #.strip() removes any leading or trailing whitespace from the input
+        option = input("Enter option (or type 'done' to finish): ").strip().lower() #.strip() removes any leading or trailing whitespace from the input, and .lower() converts the input to lowercase for case-insensitive comparison.
         
         if option == "": #for empty input, prompt the user to enter something
             print("Input cannot be empty. Please enter something.")
             continue
         
-        if option.lower() == 'done': #case sentitivity, converts the input to lowercase and checks if it is 'done' to exit the loop
+        if option == 'done': #case sentitivity, converts the input to lowercase and checks if it is 'done' to exit the loop
             break
 
         options.append(option) #adds input to the options list
@@ -30,7 +45,46 @@ def wheel():
         print(f"{idx}. {opt}")
 #idx is the index number starting at 1, opt is the option from the options list. This loop prints each option with its corresponding number.
 
-    input("\nPress Enter to spin the wheel...")
-    result = random.choice(options)
-    print(f"The wheel landed on: {result}")
-#random.choice() function selecta a random option from the options list and prints the result.
+    spin_wheel(options)
+
+def spin_wheel(options):
+    """Spins the wheel to select a random option, then delete that option from the list to be spun again without duplicates"""
+
+    print("Are you ready to spin the wheel? Say 'yes' to spin or 'no' to restart your options.")
+
+    response = input().strip().lower()
+    if response == 'no':
+        wheel()
+    
+    elif response == 'yes':
+        print("Spinning the wheel...")
+        result = random.choice(options) #randomly selects an option from the options list
+        print(f"The wheel landed on: {result}")
+        options.remove(result) #removes the selected option from the options list
+        final(options)
+
+    else:
+        print("Invalid input. Please enter 'yes' or 'no'.")
+        spin_wheel(options)
+
+def final(options):
+    """Asks if user wants to spin again or exit the program"""
+
+    print("Would you like to spin again or create a new wheel? Say 'spin again' to spin again, 'new wheel' to create a new wheel, or 'no' to exit the program.")
+
+    response = input().strip().lower()
+    if response == 'no':
+        print("Exiting the program. Goodbye!")  
+    
+    elif response == 'spin again':
+        spin_wheel(options)
+    
+    elif response == 'new wheel':
+        wheel()
+
+    else:
+        print("Invalid input. Please enter 'spin again', 'new wheel', or 'no'.")
+        final(options)
+
+#calling the functions to start the program
+intro()
