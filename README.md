@@ -1,4 +1,4 @@
-# App summary: A random wheel generator that takes user inputs, records them in a list, then outputs one randomly selected input. 
+# A random wheel generator that takes user inputs, records them in a list, then outputs one randomly selected input. 
 
 # What the app does
 1. program asks to create a wheel
