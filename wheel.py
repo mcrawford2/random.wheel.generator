@@ -74,7 +74,7 @@ def spin_wheel(options):
         final(options)
 
     else:
-        print("Invalid input. Please enter 'yes' or 'no'.")
+        print("Invalid input. Please enter 'yes' or 'no'.") 
         spin_wheel(options)
 
 def final(options):
@@ -93,7 +93,7 @@ def final(options):
         wheel()
 
     else:
-        print("Invalid input. Please enter 'spin again', 'new wheel', or 'no'.")
+        print("Invalid input. Please enter 'spin again', 'new wheel', or 'no'.") 
         final(options)
 
 #calling the functions to start the program
