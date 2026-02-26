@@ -20,3 +20,4 @@
 - def wheel(): this function takes user inputs, adds them to the options list to later be chosen from, and prints the entire options list when user is done inputting.
 - def spin_wheel(): this function lets the user to choose to spin the wheel or restart inputting options. If the wheel is spun, it randomly selects an option from the list, prints it, then deletes it from the list.
 - def final(): this function lets the user choose either to spin the current wheel again, create a new wheel with different options, or exit the program.
+- after calling intro(), all other functions run consecutively
