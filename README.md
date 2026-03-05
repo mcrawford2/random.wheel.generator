@@ -21,3 +21,9 @@
 - def spin_wheel(): this function lets the user to choose to spin the wheel or restart inputting options. If the wheel is spun, it randomly selects an option from the list, prints it, then deletes it from the list.
 - def final(): this function lets the user choose either to spin the current wheel again, create a new wheel with different options, or exit the program.
 - after calling intro(), all other functions run consecutively
+
+# What still needs to be implimented (ideas from agent plan/wheel)
+- maximum number of spins
+- spin count
+- option to remove an entry from wheel
+- when quitting program, automatically show session summary
