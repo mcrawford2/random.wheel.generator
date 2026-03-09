@@ -9,3 +9,7 @@
 **What I don't know yet:** 
 - I don't know how to randomize the inputs
 - I don't know if I should have the selected input removed so the wheel can be used again without that input being selected a second time
+**What I implimented based on plan/agent AI**
+- maximum number of spins
+- spin count
+- option to remove an entry from wheel
