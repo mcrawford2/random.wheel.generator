@@ -2,8 +2,6 @@
 
 import random
 
-print("Welcome to the Random Wheel Generator!")
-
 def intro():
     """asks if user is ready to begin"""
 
@@ -126,5 +124,10 @@ def final(options, spin_count=0):
         print("Invalid input. Please enter 'spin again', 'new wheel', or 'no'.") 
         final(options, spin_count)
 
-#calling the functions to start the program
-intro()
+def main():
+    """Entry point for the Random Wheel Generator"""
+    print("Welcome to the Random Wheel Generator!")
+    intro()
+
+if __name__ == '__main__':
+    main()

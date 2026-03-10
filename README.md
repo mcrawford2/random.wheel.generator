@@ -16,14 +16,14 @@
 12. if no, end program
 
 # How to run it
-- def intro(): this function introduces the user to the wheel generator and allows them to choose to enter the program.
-- def wheel(): this function takes user inputs, adds them to the options list to later be chosen from, and prints the entire options list when user is done inputting.
-- def spin_wheel(): this function lets the user to choose to spin the wheel or restart inputting options. If the wheel is spun, it randomly selects an option from the list, prints it, then deletes it from the list.
+- def intro(): this function introduces the user to the wheel generator and allows them to choose to enter the program. Calls wheel() when ready.
+- def wheel(): this function takes user inputs, adds them to the options list to later be chosen from, and prints the entire options list when user is done inputting. It also allows the user to remove entries before spinning. Calls spin_wheel() when ready.
+- def spin_wheel(): this function lets the user to choose to spin the wheel or restart inputting options. If the wheel is spun, it randomly selects an option from the list, prints it, then deletes it from the list. It tracks spin count and enforces a maximum of 10 spins. Calls final() after each spin.
 - def final(): this function lets the user choose either to spin the current wheel again, create a new wheel with different options, or exit the program.
 - after calling intro(), all other functions run consecutively
+- def main(): this function is the entry point for the program. It prints the welcome message and calls intro() once triggered by the if __name__ == '__main__' guard at the bottom of the file.
+- the program is started via if __name__ == '__main__': which calls main(), which then calls each function consecutively based on user input.
 
 # What still needs to be implimented (ideas from agent plan/wheel)
-- maximum number of spins
-- spin count
-- option to remove an entry from wheel
 - when quitting program, automatically show session summary
+- update 'what the app does' to reflect ai changes
