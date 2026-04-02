@@ -23,7 +23,3 @@
 - after calling intro(), all other functions run consecutively
 - def main(): this function is the entry point for the program. It prints the welcome message and calls intro() once triggered by the if __name__ == '__main__' guard at the bottom of the file.
 - the program is started via if __name__ == '__main__': which calls main(), which then calls each function consecutively based on user input.
-
-# What still needs to be implimented (ideas from agent plan/wheel)
-- when quitting program, automatically show session summary
-- update 'what the app does' to reflect ai changes
